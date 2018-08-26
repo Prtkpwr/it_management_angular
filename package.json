@@ -20,14 +20,18 @@
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
+    "adm-zip": "^0.4.11",
     "core-js": "^2.5.4",
+    "hoek": "^5.0.4",
     "jquery": "^3.3.1",
     "ng2-data-table": "^1.4.0",
     "ng2-order-pipe": "^0.1.5",
     "ng2-search-filter": "^0.4.7",
     "ng2-toastr": "^4.1.2",
     "ngx-pagination": "^3.1.1",
+    "parsejson": "0.0.3",
     "rxjs": "^6.2.1",
+    "url-parse": "^1.4.3",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
