@@ -1,0 +1,77 @@
+
+<h2 class="text-center form-signin-heading">Edit Existing User</h2>
+<div class="row">
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+                <span>Name: </span>
+
+                <label for="inputName" class="sr-only">Name</label>
+
+                <input type="text" id="inputName" class="form-control" [(ngModel)]="all.name" placeholder="username" required="required" autofocus>
+
+                <br>
+
+                <span>Department: </span>
+
+                <label for="inputDepartment" class="sr-only">Department</label>
+
+                <input type="text" id="inputDepartment" class="form-control" [(ngModel)]="all.department" placeholder="password" required>
+
+                <br>
+
+                <span>Model: </span>
+
+                <label for="inputMotherboard" class="sr-only">Model</label>
+
+                <input type="text" id="inputMotherboard" class="form-control" [(ngModel)]="all.model" placeholder="firstName">
+
+                <br>
+
+                <span>Serial: </span>
+
+                <label for="inputcpu" class="sr-only">Serial</label>
+
+                <input type="text" id="inputcpu" class="form-control" [(ngModel)]="all.serial" placeholder="lastName">
+
+                <br>
+
+                <span>OS: </span>
+
+                <label for="inputRam" class="sr-only">OS</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="all.os" placeholder="email">
+
+                <br>
+
+                <span>MSOffice: </span>
+
+                <label for="inputRam" class="sr-only">MSOffice</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="all.msoffice" placeholder="email">
+
+                <br>
+
+                <span>Remarks: </span>
+
+                <label for="inputRam" class="sr-only">Remarks</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="all.remarks" placeholder="email">
+
+                <br>
+
+
+               
+        </div>
+        
+        <div class="col-md-4"></div>
+        <br>
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+                <button [disabled]="!(all.name && all.department)" class="btn btn-sm btn-primary btn-block" type="button" (click)="editLaptopFunction()">
+                Update Laptop</button>
+                <button (click)="backClicked()" class="btn btn-sm btn-danger btn-block" type="button">Cancel</button>
+        </div>
+        <div class="col-md-5"></div>
+</div>

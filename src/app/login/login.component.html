@@ -1,0 +1,18 @@
+<br/>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <form>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input [(ngModel)]="username" type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input [(ngModel)]="password" type="password" placeholder="Enter Password" name="psw" required>
+          
+      <button (click)="doLogin()">Login</button>
+    </div>
+  </form>
+</div>
+  <div class="col-md-4"></div>
+</div>

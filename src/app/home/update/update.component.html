@@ -1,0 +1,111 @@
+
+<h2 class="text-center form-signin-heading">Update Entry</h2>
+<br/>
+<div class="row">
+  <div class="col-md-1"></div>
+        <div class="col-md-5">
+
+    <span>Name: </span>
+
+    <label for="inputName" class="sr-only">Name</label>
+
+    <input type="text" id="inputName" class="form-control" [(ngModel)]="all.name" placeholder="Name" autofocus>
+
+    <br>
+
+    <span>Department: </span>
+
+    <label for="inputDepartment" class="sr-only">Department</label>
+
+    <input type="text" id="inputDepartment" class="form-control" [(ngModel)]="all.department" placeholder="Department">
+
+    <br>
+
+    <span>Motherboard: </span>
+
+    <label for="inputMotherboard" class="sr-only">Motherboard</label>
+
+    <input type="input" id="inputMotherboard" class="form-control" [(ngModel)]="all.motherboard" placeholder="Motherboard">
+
+    <br>
+
+    <span>CPU: </span>
+
+    <label for="inputcpu" class="sr-only">CPU</label>
+
+    <input type="email" id="inputcpu" class="form-control" [(ngModel)]="all.cpu" placeholder="CPU">
+
+    <br>
+
+    <span>Ram: </span>
+
+    <label for="inputRam" class="sr-only">Ram</label>
+
+    <input type="text" id="inputRam" class="form-control" [(ngModel)]="all.ram" placeholder="Ram">
+
+    <br>
+
+
+    <span>Hard Disk: </span>
+
+    <label for="inputHDD" class="sr-only">Hard Disk</label>
+
+    <input type="text" id="hdd" class="form-control" [(ngModel)]="all.hdd" placeholder="Hard Disk">
+
+    <br>
+  </div>
+  <div class="col-md-5">
+
+    <span>Monitor: </span>
+
+    <label for="inputMonitor" class="sr-only">Hard Disk</label>
+
+    <input type="text" id="monitor" class="form-control" [(ngModel)]="all.monitor" placeholder="Monitor">
+
+    <br>
+
+    <span>Keyboard: </span>
+
+    <label for="inputKeyboard" class="sr-only">Keyboard</label>
+
+    <input type="text" id="keyboard" class="form-control" [(ngModel)]="all.keyboard" placeholder="Keyboard">
+
+    <br>
+
+    <span>Mouse: </span>
+
+    <label for="inputMouse" class="sr-only">Mouse</label>
+
+    <input type="text" id="mouse" class="form-control" [(ngModel)]="all.mouse" placeholder="Mouse">
+
+    <br>
+
+    <span>OS: </span>
+
+    <label for="inputOS" class="sr-only">OS</label>
+
+    <input type="text" id="os" class="form-control" [(ngModel)]="all.os" placeholder="OS">
+
+    <br>
+
+    <span>Remarks: </span>
+
+    <label for="inputremarks" class="sr-only">OS</label>
+
+    <textarea type="text" id="remarks" class="form-control" [(ngModel)]="all.remarks" placeholder="Remarks"></textarea>
+
+    <br>
+
+   
+  </div>
+  <div class="col-md-1"></div>
+  <br>
+  <div class="col-md-5"></div>
+  <div class="col-md-2">
+    <button [disabled]="!(all.name && all.remarks && all.department)" class="btn btn-sm btn-primary btn-block" type="button" (click)="updateEntryFunction()">Update Computer</button>
+    <button [routerLink]="['/home/computerlist']" class="btn btn-sm btn-danger btn-block" type="button">Cancel</button>
+  </div>
+  <div class="col-md-5"></div>
+</div>
+
+

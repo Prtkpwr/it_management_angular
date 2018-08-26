@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div style="margin-top:80px" class="input-group stylish-input-group col-md-6">
+    <input type="text" class="form-control rounded-0 py-2" placeholder="Search..." [(ngModel)]="filter" onfocus="this.placeholder = ''"
+      onblur="this.placeholder = 'Search...'" required="">
+  </div>
+
+  <div class="col-md-3">
+    <button style="margin-top:80px" class="btn btn-lg" [routerLink]="['addlaptop']">Add Laptop</button>
+  </div>
+</div>
+<br/>
+<div style="width:100%">
+  <table class="text-center table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Laptop Model</th>
+        <th>Serial No.</th>
+        <th>OS</th>
+        <th>MSOffice</th>
+        <th>Remarks</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let all of laptops | filter:filter| paginate: { itemsPerPage: 6, currentPage: p }">
+        <td>{{all.name}}</td>
+        <td>{{all.department}}</td>
+        <td>{{all.model}}</td>
+        <td>{{all.serial}}</td>
+        <td>{{all.os}}</td>
+        <td>{{all.msoffice}}</td>
+        <td>{{all.remarks}}</td>
+        
+        <td class="btn-group">
+          <button [routerLink]="['edit',all._id]" class="btn btn-sm btn-success">Edit</button>
+          <button (click)="deleteLaptop(all._id)" class="btn btn-sm btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <div class="text-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

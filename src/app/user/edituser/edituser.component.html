@@ -1,0 +1,61 @@
+
+<h2 class="text-center form-signin-heading">Edit Existing User</h2>
+<div class="row">
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+                <span>username: </span>
+
+                <label for="inputName" class="sr-only">username</label>
+
+                <input type="text" id="inputName" class="form-control" [(ngModel)]="all.username" placeholder="username" required="required" autofocus>
+
+                <br>
+
+                <span>password: </span>
+
+                <label for="inputDepartment" class="sr-only">password</label>
+
+                <input type="text" id="inputDepartment" class="form-control" [(ngModel)]="all.password" placeholder="password" required>
+
+                <br>
+
+                <span>firstName: </span>
+
+                <label for="inputMotherboard" class="sr-only">firstName</label>
+
+                <input type="text" id="inputMotherboard" class="form-control" [(ngModel)]="all.firstName" placeholder="firstName">
+
+                <br>
+
+                <span>lastName: </span>
+
+                <label for="inputcpu" class="sr-only">lastName</label>
+
+                <input type="text" id="inputcpu" class="form-control" [(ngModel)]="all.lastName" placeholder="lastName">
+
+                <br>
+
+                <span>email: </span>
+
+                <label for="inputRam" class="sr-only">email</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="all.email" placeholder="email">
+
+                <br>
+
+
+               
+        </div>
+        
+        <div class="col-md-4"></div>
+        <br>
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+                <button [disabled]="!(all.username && all.password)" class="btn btn-sm btn-primary btn-block" type="button" (click)="editUserFunction()">
+                Update User</button>
+                <button (click)="backClicked()" class="btn btn-sm btn-danger btn-block" type="button">Cancel</button>
+        </div>
+        <div class="col-md-5"></div>
+</div>

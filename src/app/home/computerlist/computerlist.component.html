@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div style="margin-top:80px" class="input-group stylish-input-group col-md-6">
+    <input type="text" class="form-control rounded-0 py-2" placeholder="Search..." [(ngModel)]="filter" onfocus="this.placeholder = ''"
+      onblur="this.placeholder = 'Search...'" required="">
+  </div>
+  <div class="col-md-3">
+    <button style="margin-top:80px" class="btn btn-lg" [routerLink]="['add']">Add Computers</button>
+  </div>
+</div>
+<br/>
+<div style="width:100%">
+  <table class="text-center table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Motherboard</th>
+        <th>CPU</th>
+        <th>Ram</th>
+        <th>HDD</th>
+        <th>Monitor</th>
+        <th>Keyboard</th>
+        <th>Mouse</th>
+        <th>OS</th>
+        <th>Remarks</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let all of data | filter:filter| paginate: { itemsPerPage: 6, currentPage: p }">
+        <td>{{all.name}}</td>
+        <td>{{all.department}}</td>
+        <td>{{all.motherboard}}</td>
+        <td>{{all.cpu}}</td>
+        <td>{{all.ram}}</td>
+        <td>{{all.hdd}}</td>
+        <td>{{all.monitor}}</td>
+        <td>{{all.keyboard}}</td>
+        <td>{{all.mouse}}</td>
+        <td>{{all.os}}</td>
+        <td>{{all.remarks}}</td>
+        <td class="btn-group">
+          <button [routerLink]="['update',all._id]" class="btn btn-sm btn-success">Edit</button>
+          <button (click)="deleteEntry(all._id)" class="btn btn-sm btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <div class="text-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+
+<h2 class="text-center form-signin-heading">Add New Laptop</h2>
+<div class="row">
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+                <span>Name: </span>
+
+                <label for="inputName" class="sr-only">Name</label>
+
+                <input type="text" id="inputName" class="form-control" [(ngModel)]="name" placeholder="name" required="required" autofocus>
+
+                <br>
+
+                <span>DepartMent: </span>
+
+                <label for="inputDepartment" class="sr-only">DepartMent</label>
+
+                <input type="text" id="inputDepartment" class="form-control" [(ngModel)]="department" placeholder="department" required>
+
+                <br>
+
+                <span>Laptop Model: </span>
+
+                <label for="inputMotherboard" class="sr-only">Laptop Model</label>
+
+                <input type="text" id="inputMotherboard" class="form-control" [(ngModel)]="model" placeholder="model">
+
+                <br>
+
+                <span>Serial No.: </span>
+
+                <label for="inputcpu" class="sr-only">Serial No.</label>
+
+                <input type="text" id="inputcpu" class="form-control" [(ngModel)]="serial" placeholder="serial">
+
+                <br>
+
+                <span>OS: </span>
+
+                <label for="inputRam" class="sr-only">OS</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="os" placeholder="os">
+
+                <br>
+
+                <span>MS- Office: </span>
+
+                <label for="inputRam" class="sr-only">MS- Office</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="msoffice" placeholder="msoffice">
+
+                <br>
+
+                <span>Remarks: </span>
+
+                <label for="inputRam" class="sr-only">Remarks</label>
+
+                <input type="email" id="inputRam" class="form-control" [(ngModel)]="remarks" placeholder="remarks">
+
+                <br>
+
+
+               
+        </div>
+        
+        <div class="col-md-4"></div>
+        <br>
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+                <button [disabled]="!(name && department)" class="btn btn-sm btn-primary btn-block" type="button" (click)="createLaptopEntryFunction()">
+                Add Laptop</button>
+                <button (click)="backClicked()" class="btn btn-sm btn-danger btn-block" type="button">Cancel</button>
+        </div>
+        <div class="col-md-5"></div>
+</div>
